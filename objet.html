@@ -60,26 +60,32 @@
     </form>
 
     <script>
-       let personne = {
+        
+        let personne = {
             name: "toto",
             firstname: "tata",
             age: 5,
             gender: "male",
             adress: {
-            number: 8,
-            adress: "chieftoto",
-            type: "street",
-            city: "Tototown",
-            country: "France"
+                number: 8,
+                adress: "chieftoto",
+                type: "street",
+                city: "Tototown",
+                country: "France"
             },
             email: "toto@gmail.com",
             animals: [
                 'dog',
                 'cat',
                 'goldfish'
-                ]
-        };
-    
+            ],
 
-        console.log(personne['region']);
+            salutation: function() {
+            myname = "toto";
+            alert("Hello " + myname);
+        }
+
+        };
+        personne.salutation();
+
     </script>
