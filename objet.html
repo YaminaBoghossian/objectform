@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1> Please fill in </h1>
+    <form action="/premier" method="post">
+        <p>
+            <label for="nom"> Name: </label>
+            <input type="text" id="nom" />
+        </p>
+        <p>
+            <label for="prenom"> Firstname: </label>
+            <input type="text" id="prenom" />
+        </p>
+        <p>
+            <label for="age"> Age: </label>
+            <input type="number" name="age" id="age" min="0" max="130" />
+        </p>
+        <p>
+            <label for="gender"> Gender: </label>
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
+            <input type="radio" name="gender" value="Other"> Other
+            <label for="message"> If "Other" please detail : </label>
+            <textarea id="message"></textarea>
+        </p>
+        <p>
+            <label for="email"> Email: </label>
+            <input type="email" id="email" />
+        </p>
+        <p>
+            <label for="adress">Adress: </label>
+            <input type="adress" id="adress" />
+        </p>
+        <p>
+            <select name="region" id="region">
+					<label for="region">
+						<option value="choisir">Select your region</option>
+						<option value="rhonealpesauvergne">Rhone Alpes Auvergne</option>
+						<option value="Bouchedurhone">Bouches du Rhone</option>
+						<option value="PACA">PACA</option>
+						<option value="Guyane"> Guyane</option>
+						<option value="Martinique"> Martinique</option>
+						<option value="Reunion"> Reunion</option>
+					</label>
+				</select>
+        </p>
+        <br/>
+        <p>
+            <input type="submit" name="nom" value="Let's go!" />
+        </p>
+    </form>
+
+    <script>
+       let personne = {
+            name: "toto",
+            firstname: "tata",
+            age: 5,
+            gender: "male",
+            adress: {
+            number: 8,
+            adress: "chieftoto",
+            type: "street",
+            city: "Tototown",
+            country: "France"
+            },
+            email: "toto@gmail.com",
+        };
+        
+
+        console.log(personne['region']);
+    </script>
